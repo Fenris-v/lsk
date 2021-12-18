@@ -1,0 +1,84 @@
+.header
+  position: relative
+  z-index: 2
+  +space-nw
+  align-items: center
+  padding: 20px 0
+
+  > div
+    flex-shrink: 0
+
+    &:not(:last-child)
+      margin-right: 40px
+
+  &__center
+    flex-grow: 1
+
+    > div:first-child
+      +space-nw
+      align-items: center
+      margin-bottom: 20px
+
+      a
+        flex-shrink: 0
+
+        &:last-child
+          margin-left: auto
+
+    .btn
+      margin-left: 50px
+
+    nav ul
+      +space-nw
+
+      li
+        a
+          position: relative
+          line-height: 25px
+
+          &::after
+            content: ''
+            height: 1px
+            width: 100%
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            background: rgba(255, 255, 255, 0.2)
+
+
+  .phone, .mail, nav ul a
+    @include font($white, $medium, 500, 15px, 1)
+
+  .phone
+    font-size: 23px
+
+  .mail
+    font-size: 16px
+    +space-nw
+    align-items: center
+
+    img
+      margin-right: 10px
+
+  nav ul a
+    text-transform: uppercase
+
+  &__cart
+    width: 70px
+    height: 70px
+    background: linear-gradient(91.87deg, #CEB590 -8.38%, #F4C174 81.75%, #FFC46C 106.96%), #CEB590
+    +round
+    +center
+    position: relative
+
+    &__counter
+      position: absolute
+      right: 0
+      top: 0
+      background: $white
+      +round
+      width: 20px
+      height: 20px
+      +center
+      @include font($gold, $medium, 500, 10px, 1)

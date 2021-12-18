@@ -1,0 +1,125 @@
+*
+  +box
+
+body
+  max-width: 100%
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  @include font()
+  margin: 0
+
+  .wrapper
+    max-width: 1330px
+    padding: 0 15px
+    +box
+    margin: 0 auto
+
+    &_fullHD
+      max-width: 1920px
+      margin: 0 auto
+      position: relative
+
+p
+  margin: 0
+
+a
+  text-decoration: none
+  display: inline-flex
+
+.innerTitle
+  @include font($textBlack, $medium, 500, 50px, 1.1)
+  margin: 0 0 80px
+
+  &.star
+    display: flex
+
+    &::after
+      content: url("../images/star.svg")
+      margin-left: 30px
+      margin-top: 5px
+
+.btn
+  display: inline-flex
+  padding: 0 20px
+  @include font($white, $bold, 700, 12px, 50px)
+  white-space: nowrap
+  text-decoration: none
+  +transition
+  +border-radius(30px)
+  +box
+  text-transform: uppercase
+  border: none
+  cursor: pointer
+
+  &:hover
+    +transition
+
+  &_white
+    background: $white
+    @include font($gold, $bold, 700, 12px, 30px)
+
+  &_gold
+    background: $gold
+    padding: 0 40px
+
+.slick-slide
+  &:focus
+    outline: none
+
+.slick-dots
+  padding: 0
+  +center
+  list-style: none
+  margin: 90px 0 0
+
+  li
+    width: 30px
+    +center
+
+    button
+      padding: 0
+      font-size: 0
+      border: none
+      background: #9F9F9F
+      width: 12px
+      height: 12px
+      +border-radius(6px)
+      opacity: 0.2
+      +transition
+
+      &:focus
+        outline: none
+
+    &.slick-active
+      button
+        +transition
+        width: 100%
+        background: #FECA8B
+        opacity: 1
+
+.slick-arrow
+  border: none
+  background: none
+  position: absolute
+  cursor: pointer
+  top: -190px
+
+  &:focus
+    outline: none
+
+  &.slick-next
+    right: 0
+    +transform(rotate(180deg))
+
+  &.slick-prev
+    right: 90px
+
+.no_list
+  padding: 0
+  margin: 0
+  list-style: none
+
+.price
+  @include font($gold, $medium, 500, 24px)
+  margin-bottom: 20px
