@@ -1,0 +1,38 @@
+@media only screen and (max-width: 1000px)
+  .advantages__item
+    padding: 40px 20px 120px
+
+    p
+      font-size: 18px
+
+  .catalog
+    grid-template-columns: repeat(3, 1fr)
+
+    &__item
+      &:nth-child(3), &:nth-child(6), &:nth-child(9)
+        border-right: 1px solid rgba(196, 196, 196, 0.2)
+
+      &:nth-child(4), &:nth-child(8), &:nth-child(7)
+        border-right: none
+
+      &:last-child
+        width: calc(100% + 1px)
+        border-top: none
+
+  .montage
+    grid-template-columns: repeat(2, 1fr)
+
+    &__item
+      &:last-child
+        grid-column-start: 1
+        grid-column-end: 3
+
+  .partners
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+  .footer
+    flex-direction: column
+
+    .logo, nav
+      margin-bottom: 20px

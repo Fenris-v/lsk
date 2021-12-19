@@ -1,0 +1,66 @@
+@media only screen and (max-width: 767px)
+  .header
+    flex-direction: column
+
+    > div:not(:last-child), .header__cart
+      margin-right: 0
+
+    > div:not(:last-child)
+      margin-bottom: 20px
+
+  .s_hero
+    margin-top: -270px
+
+  .hero
+    h1
+      font-size: 30px
+
+    .wrapper
+      padding-top: 280px
+
+      > div
+        a > div > div
+          width: 120px
+          height: 120px
+
+        p
+          margin-left: 20px
+
+  .s_advantages a
+    left: 15px
+
+  .advantages
+    &__item
+      padding: 40px 20px 120px
+      width: 50%
+
+      &:first-child, &:nth-child(2)
+        border-bottom: 1px solid rgba(196, 196, 196, 0.3)
+
+      &:nth-child(2)
+        &::after
+          position: absolute
+          content: ''
+          top: 0
+          left: unset
+          right: 0
+          bottom: 0
+          width: 1px
+          height: 100%
+          background: rgba(196, 196, 196, 0.3)
+
+  .catalog
+    &__item
+      padding: 15px
+
+      &__hover
+        padding: 15px
+
+  .directions__item
+    width: 100%
+
+    &:first-child
+      margin-bottom: 50px
+
+  .popular__item
+    padding: 15px

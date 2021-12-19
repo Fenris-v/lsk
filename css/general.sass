@@ -27,6 +27,21 @@ a
   text-decoration: none
   display: inline-flex
 
+.title_flex
+  +space
+  align-items: center
+  margin-bottom: 80px
+
+  a
+    white-space: nowrap
+    +space-nw
+    align-items: center
+    @include font($gold, $bold, 700, 15px)
+    text-transform: uppercase
+
+  .innerTitle
+    margin-bottom: 0
+
 .innerTitle
   @include font($textBlack, $medium, 500, 50px, 1.1)
   margin: 0 0 80px
@@ -72,31 +87,38 @@ a
   +center
   list-style: none
   margin: 90px 0 0
+  position: absolute
+  bottom: 60px
+  left: 50%
+  +transform(translateX(-50%))
 
   li
-    width: 30px
+    width: 24px
+    height: 24px
+    padding: 6px
     +center
+    +round
+
+    &:not(:last-child)
+      margin-right: 20px
 
     button
       padding: 0
       font-size: 0
       border: none
-      background: #9F9F9F
+      background: $white
       width: 12px
       height: 12px
       +border-radius(6px)
-      opacity: 0.2
-      +transition
 
       &:focus
         outline: none
 
     &.slick-active
+      border: 2px solid $gold
+
       button
-        +transition
-        width: 100%
-        background: #FECA8B
-        opacity: 1
+        opacity: 0
 
 .slick-arrow
   border: none

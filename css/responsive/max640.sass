@@ -1,0 +1,22 @@
+@media only screen and (max-width: 640px)
+  .innerTitle
+    font-size: 25px
+
+  .catalog
+    grid-template-columns: repeat(2, 1fr)
+
+    &__item
+      &:nth-child(even)
+        border-right: 1px solid rgba(196, 196, 196, 0.2)
+
+      &:nth-child(odd)
+        border-right: none
+
+      &:nth-child(9)
+        border-top: none
+
+  .montage
+    grid-template-columns: repeat(1, 1fr)
+
+  .montage__item:last-child
+    grid-column-end: 2
